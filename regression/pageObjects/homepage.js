@@ -44,6 +44,18 @@ class homepage {
         let createAnAccount = element.all(by.linkText("Create an account"));
         await createAnAccount.click();
     }
+    async clickHome(){
+        let home = element.all(by.linkText("HOME"));
+        await home.click();
+    }
+    async clickShop(){
+        let shop = element.all(by.linkText("SHOP"));
+        await shop.click();
+    }
+    async clickMyAccount(){
+        let myAccount = element.all(by.linkText("MY ACCOUNT"));
+        await myAccount.click();
+    }
   }
 
   module.exports = new homepage();

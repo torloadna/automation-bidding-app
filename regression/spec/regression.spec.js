@@ -4,22 +4,18 @@ const createAnAccount = require('../pageObjects/createAnAccount');
 
 describe('regression tests', ()=> {
 
-  
   beforeEach(async function() {  
     browser.ignoreSynchronization = true;
     await browser.get('http://ec2-3-73-53-128.eu-central-1.compute.amazonaws.com:8090/');
     await browser.manage().window().maximize();
   });
 
-
   it('RT001',async function(){
     await homepage.clickFashion();
-    await browser.sleep(7000);
-  });
+  })
   it('RT002',async function(){
-    await browser.sleep(2000);
     await homepage.clickAccessories();
-  });
+  })
   it('RT003',async function(){
     await homepage.clickElectronics();
   })
@@ -51,6 +47,56 @@ describe('regression tests', ()=> {
     await createAnAccount.insertLastName('Torlo');
     await createAnAccount.insertEmail('adna.torlo@edu.fit.ba');
     await createAnAccount.insertPassword('adnatorlo123!');
-    await browser.sleep(4000);
+    await browser.sleep(2000);
+  })
+  it('RT012',async function(){
+    await homepage.clickCreateAnAccount();
+    await createAnAccount.insertUsername('_adna_');
+    await createAnAccount.insertName('Adna');
+    await createAnAccount.insertLastName('Torlo');
+    await createAnAccount.insertEmail('adna.torlo@edu.fit.ba');
+    await createAnAccount.insertPassword('adnatorlo123!');
+  })
+  it('RT013',async function(){
+    await homepage.clickCreateAnAccount();
+    await createAnAccount.insertUsername('adna123');
+    await createAnAccount.insertName('_123_');
+    await createAnAccount.insertLastName('Torlo');
+    await createAnAccount.insertEmail('adna.torlo@edu.fit.ba');
+    await createAnAccount.insertPassword('adnatorlo123!');
+  })
+  it('RT014',async function(){
+    await homepage.clickCreateAnAccount();
+    await createAnAccount.insertUsername('adna123');
+    await createAnAccount.insertName('Adna');
+    await createAnAccount.insertLastName('_123_');
+    await createAnAccount.insertEmail('adna.torlo@edu.fit.ba');
+    await createAnAccount.insertPassword('adnatorlo123!');
+  })
+  it('RT015',async function(){
+    await homepage.clickCreateAnAccount();
+    await createAnAccount.insertUsername('adna123');
+    await createAnAccount.insertName('Adna');
+    await createAnAccount.insertLastName('Torlo');
+    await createAnAccount.insertEmail('adna@adna');
+    await createAnAccount.insertPassword('adnatorlo123!');
+  })
+  it('RT016',async function(){
+    await homepage.clickCreateAnAccount();
+    await createAnAccount.insertUsername('adna123');
+    await createAnAccount.insertName('Adna');
+    await createAnAccount.insertLastName('Torlo');
+    await createAnAccount.insertEmail('adna.torlo@edu.fit.ba');
+    await createAnAccount.insertPassword('1');
+  })
+  it('RT017',async function(){
+    await homepage.clickHome();
+    expect(await browser.getTitle()).toBe("Auction App");
+  })
+  it('RT018',async function(){
+    await homepage.clickShop();
+  })
+  it('RT019',async function(){
+    await homepage.clickMyAccount();
   })
 });

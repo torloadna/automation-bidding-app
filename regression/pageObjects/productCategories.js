@@ -1,11 +1,11 @@
 class productCategories {
     
     async clickFashionPlus(){
-        let fashionPlus = element.all(by.xpath("//button[@id='ca69f0cb-8b11-4b3e-8ad7-18b4277f6101']"));
+        let fashionPlus = element.all(by.xpath("/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"));
         await fashionPlus.click();
     }
     async clickFashionMinus(){
-        let fashionMinus = element.all(by.css("#ca69f0cb-8b11-4b3e-8ad7-18b4277f6101"));
+        let fashionMinus = element.all(by.css("/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]"));
         await fashionMinus.click();
     }
     async clickAccessoriesPlus(){
