@@ -20,6 +20,10 @@ class createAnAccount {
         let password = element.all(by.id('input-password'));
         await password.sendKeys(pass);
     }
+    async clickRegister(){
+        let register = element.all(by.xpath("//button[normalize-space()='REGISTER']"));
+        await register.click();
+    }
   }
 
   module.exports = new createAnAccount();
