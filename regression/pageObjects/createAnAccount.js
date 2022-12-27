@@ -1,8 +1,8 @@
 class createAnAccount {
     
-    async insertUsername(usrname){
+    async insertUsername(name){
         let username = element.all(by.id('input-username'));
-        await username.sendKeys(usrname);
+        await username.sendKeys(name);
     }
     async insertName(name){
         let firstName = element.all(by.id('input-name'));
