@@ -1,11 +1,14 @@
 class productCategories {
+
+    // this pageObject is still not working 
+    //can't find right locator for "+" and "-" part of the page
     
     async clickFashionPlus(){
         let fashionMinus = element.all(by.xpath("//button[normalize-space()='-']"));
         await fashionMinus.click();
     }
     async clickFashionMinus(){
-        let fashionPlus = element.all(by.xpath("(//button[contains(text(),'+')])[1]"));
+        let fashionPlus = element.all(by.xpath("//div[@id='category-filter']//div[1]//div[1]"));
         await fashionPlus.click();
     }
     async clickAccessoriesPlus(){

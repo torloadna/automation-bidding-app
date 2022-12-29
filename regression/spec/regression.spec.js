@@ -1,6 +1,8 @@
 const homepage = require('../pageObjects/homepage');
 const productCategories = require('../pageObjects/productCategories');
 const createAnAccount = require('../pageObjects/createAnAccount');
+const login = require('../pageObjects/login');
+const shop = require('../pageObjects/shop');
 
 describe('regression tests', ()=> {
 
@@ -96,6 +98,41 @@ describe('regression tests', ()=> {
   })
   it('RT019',async function(){
     await homepage.clickOn("MY ACCOUNT");
+  })
+  it('TR023',async function(){
+    homepage.clickOn("Login");
+    login.insertEmail("adna.torlo@edu.fit.ba");
+    login.insertPassword("adnatorlo123!");
+    login.clickLogin();
+  })
+  it('TR024',async function(){
+    homepage.clickOn("Login");
+    login.insertEmail("adna.torlo@edu.fit.ba");
+    login.insertPassword("adnatorlo123!");
+    //login.rememberMe();
+    login.clickLogin();
+  })
+  it('TR025',async function(){
+    homepage.clickOn("Login");
+    login.insertEmail("adna.torlo@edu.dif.ba");
+    login.insertPassword("adnatorlo123!");
+    //login.rememberMe();
+    login.clickLogin();
+  })
+  it('TR026',async function(){
+    homepage.clickOn("Login");
+    login.insertEmail("adna.torlo@edu.fit.ba");
+    login.insertPassword("adnatorlo123");
+    //login.rememberMe();
+    login.clickLogin();
+  })
+  // trying to solve this test case where I need to use "+" and "-" 
+  it('TR027',async function(){
+    homepage.clickOn("SHOP");
+    //shop.clickOnPlus();
+    productCategories.clickFashionPlus();
+    //shop.clickOnAcc();
+    browser.sleep(3000);
   })
   
 });
