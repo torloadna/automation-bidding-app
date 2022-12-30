@@ -126,13 +126,14 @@ describe('regression tests', ()=> {
     //login.rememberMe();
     login.clickLogin();
   })
-  // trying to solve this test case where I need to use "+" and "-" 
   it('TR027',async function(){
-    homepage.clickOn("SHOP");
-    //shop.clickOnPlus();
-    productCategories.clickFashionPlus();
-    //shop.clickOnAcc();
-    browser.sleep(3000);
-  })
+    await homepage.clickOn("SHOP");
+    await browser.sleep(3000);
+    await productCategories.clickFashion();
+    await productCategories.clickFashionAccessories();
+    await productCategories.clickFashionBelts();
+    await productCategories.clickFashionAccessories();
+    await productCategories.clickFashionBelts();
+  });
   
 });

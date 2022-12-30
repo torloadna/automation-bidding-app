@@ -17,7 +17,7 @@ describe('smoke test',()=>{
         await login.rememberMe();
         await login.clickLogin();
         await homepage.clickOn("SHOP");
-        await productCategories.clickOn();
+        await productCategories.clickOnLV();
         await whiteLVBag.insertBid("501");
         await whiteLVBag.placeBid();
     })
