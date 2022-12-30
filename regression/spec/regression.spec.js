@@ -2,7 +2,6 @@ const homepage = require('../pageObjects/homepage');
 const productCategories = require('../pageObjects/productCategories');
 const createAnAccount = require('../pageObjects/createAnAccount');
 const login = require('../pageObjects/login');
-const shop = require('../pageObjects/shop');
 
 describe('regression tests', ()=> {
 
@@ -128,12 +127,28 @@ describe('regression tests', ()=> {
   })
   it('TR027',async function(){
     await homepage.clickOn("SHOP");
-    await browser.sleep(3000);
     await productCategories.clickFashion();
     await productCategories.clickFashionAccessories();
     await productCategories.clickFashionBelts();
     await productCategories.clickFashionAccessories();
     await productCategories.clickFashionBelts();
+  })
+  it('TR028',async function(){
+    await homepage.clickOn("SHOP");
+    await productCategories.clickAccessories();
+    await productCategories.clickAccessoriesJewelry();
+    await productCategories.clickAccessoriesScarves();
+    await productCategories.clickAccessoriesGloves();
+    await productCategories.clickAccessoriesJewelry();
   });
-  
+  it('TR029',async function(){
+    await homepage.clickOn("SHOP");
+    await productCategories.clickElectronics();
+    await productCategories.clickElectronicsMobile();
+    await productCategories.clickElectronicsMicrowaves();
+    await productCategories.clickElectronicsTVs();
+    await productCategories.clickElectronicsMobile();
+    await productCategories.clickElectronicsMicrowaves();
+    await productCategories.clickElectronicsTVs();
+  });
 });
