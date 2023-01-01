@@ -98,34 +98,43 @@ describe('regression tests', ()=> {
   it('RT019',async function(){
     await homepage.clickOn("MY ACCOUNT");
   })
-  it('TR023',async function(){
+  it('RT020',async function(){
+    await homepage.clickOnIcon("(//a[@aria-label='facebook'])[1]");
+  })
+  it('RT021',async function(){
+    await homepage.clickOnIcon("(//a[@aria-label='instagram'])[1]");
+  })
+  it('RT022',async function(){
+    await homepage.clickOnIcon("(//a[@aria-label='twitter'])[1]");
+  })
+  it('RT023',async function(){
     homepage.clickOn("Login");
     login.insertEmail("adna.torlo@edu.fit.ba");
     login.insertPassword("adnatorlo123!");
     login.clickLogin();
   })
-  it('TR024',async function(){
+  it('RT024',async function(){
     homepage.clickOn("Login");
     login.insertEmail("adna.torlo@edu.fit.ba");
     login.insertPassword("adnatorlo123!");
     //login.rememberMe();
     login.clickLogin();
   })
-  it('TR025',async function(){
+  it('RT025',async function(){
     homepage.clickOn("Login");
     login.insertEmail("adna.torlo@edu.dif.ba");
     login.insertPassword("adnatorlo123!");
     //login.rememberMe();
     login.clickLogin();
   })
-  it('TR026',async function(){
+  it('RT026',async function(){
     homepage.clickOn("Login");
     login.insertEmail("adna.torlo@edu.fit.ba");
     login.insertPassword("adnatorlo123");
     //login.rememberMe();
     login.clickLogin();
   })
-  it('TR027',async function(){
+  it('RT027',async function(){
     await homepage.clickOn("SHOP");
     await productCategories.clickFashion();
     await productCategories.clickFashionAccessories();
@@ -133,7 +142,7 @@ describe('regression tests', ()=> {
     await productCategories.clickFashionAccessories();
     await productCategories.clickFashionBelts();
   })
-  it('TR028',async function(){
+  it('RT028',async function(){
     await homepage.clickOn("SHOP");
     await productCategories.clickAccessories();
     await productCategories.clickAccessoriesJewelry();
@@ -141,7 +150,7 @@ describe('regression tests', ()=> {
     await productCategories.clickAccessoriesGloves();
     await productCategories.clickAccessoriesJewelry();
   });
-  it('TR029',async function(){
+  it('RT029',async function(){
     await homepage.clickOn("SHOP");
     await productCategories.clickElectronics();
     await productCategories.clickElectronicsMobile();
@@ -151,4 +160,63 @@ describe('regression tests', ()=> {
     await productCategories.clickElectronicsMicrowaves();
     await productCategories.clickElectronicsTVs();
   });
+  it('TR030',async function(){
+    await homepage.clickOn("SHOP");
+    await productCategories.clickComputers();
+    await productCategories.clickComputersLaptops();
+    await productCategories.clickComputersMonitors();
+    await productCategories.clickComputersLaptops();
+  })
+  it('TR031',async function(){
+    await homepage.clickOn("SHOP");
+    await productCategories.clickSportswear();
+    await productCategories.clickSportswearSwimsuits();
+    await productCategories.clickSportswearShoes();
+    await productCategories.clickSportswearTShirts();
+    await productCategories.clickSportswearSwimsuits();
+    await productCategories.clickSportswearShoes();
+    await productCategories.clickSportswearTShirts();
+  })
+  it('TR032',async function(){
+    await homepage.clickOn("SHOP");
+    await productCategories.clickWomen();
+    await productCategories.clickWomenBags();
+    await productCategories.clickWomenSwimsuits();
+    await productCategories.clickWomenShoes();
+    await productCategories.clickWomenTShirts();
+    await productCategories.clickWomenClothes();
+    await productCategories.clickWomenAccessories();
+    await productCategories.clickWomenBags();
+  })
+  it('TR033',async function(){
+    await homepage.clickOn("SHOP");
+    await productCategories.clickKids();
+    await productCategories.clickKidsBags();
+    await productCategories.clickKidsTShirts();
+    await productCategories.clickKidsClothes();
+    await productCategories.clickKidsToys();
+    await productCategories.clickKidsToys();
+  })
+  it('TR034',async function(){
+    await homepage.clickOn("SHOP");
+    await productCategories.clickHome();
+    await productCategories.clickHomeBedAndBath();
+    await productCategories.clickHomeTiles();
+    await productCategories.clickHomeCarpets();
+    await productCategories.clickHomeTables();
+    await productCategories.clickHomeChandeliers();
+    await productCategories.clickHomeBedAndBath();
+   })
+   it('TR035',async function(){
+    await homepage.clickOn("SHOP");
+    await productCategories.clickArt();
+    await productCategories.clickArtNFTs();
+    await productCategories.clickArtDigital();
+    await productCategories.clickArtPaintings();
+    await productCategories.clickArtSculptures();
+    await productCategories.clickArtNFTs();
+    await productCategories.clickArtDigital();
+    await productCategories.clickArtPaintings();
+    await productCategories.clickArtSculptures();
+  })
 });
