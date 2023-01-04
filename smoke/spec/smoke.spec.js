@@ -1,6 +1,6 @@
 const homepage = require('../../regression/pageObjects/homepage');
 const productCategories = require('../../regression/pageObjects/productCategories');
-const whiteLVBag = require('../../regression/pageObjects/whiteLVBag')
+const item = require('../../regression/pageObjects/item')
 const login = require('../../regression/pageObjects/login');
 
 describe('smoke test',()=>{
@@ -18,8 +18,7 @@ describe('smoke test',()=>{
         await login.clickLogin();
         await homepage.clickOn("SHOP");
         await productCategories.clickOnLV();
-        await whiteLVBag.insertBid("501");
-        await whiteLVBag.placeBid();
+        await item.insertBid("501");
+        await item.placeBid();
     })
-
 })
