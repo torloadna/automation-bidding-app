@@ -188,14 +188,10 @@ class productCategories {
         let NFTs = element.all(by.id("f52e1fdb-cca2-46db-a19b-8e7a446f64d6"));
         await NFTs.click();
     };
-    async clickOnLV(){
-        let LV = element.all(by.xpath("//h1[normalize-space()='White LV Bag']"));
-        await LV.click();
-    };
     async clickOnSculpture(){
         let sculpture = element.all(by.xpath("//h1[normalize-space()='Sculpture']"));
         await sculpture.click();
-    }
+    };
   }
 
   module.exports = new productCategories();

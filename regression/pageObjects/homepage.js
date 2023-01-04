@@ -7,6 +7,10 @@ class homepage {
         let el = element.all(by.xpath(xpath));
         await el.click();
     }
+    async clickOnById(id){
+        let el = element.all(by.id(id));
+        await el.click();
+    }
   }
   module.exports = new homepage();
   

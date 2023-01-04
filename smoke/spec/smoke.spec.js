@@ -17,8 +17,16 @@ describe('smoke test',()=>{
         await login.rememberMe();
         await login.clickLogin();
         await homepage.clickOn("SHOP");
-        await productCategories.clickOnLV();
-        await item.insertBid("501");
+        await homepage.clickOnById("explore-more");
+        await homepage.clickOnIcon("//h1[normalize-space()='New Balance Shoe']");
+        await item.insertBid("64");
         await item.placeBid();
+        await expect(element.all(by.id("regular-span")).isPresent()).toBe(true);
+        await homepage.clickOn("SHOP");
+        await homepage.clickOnIcon("//h1[normalize-space()='Sculpture']");
+        await item.insertBid("123");
+        await item.placeBid();
+        await browser.sleep(3000);
+        await expect(element.all(by.id("bold-span")).getText()).toContain("Invalid!")
     })
 })
