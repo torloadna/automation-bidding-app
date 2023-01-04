@@ -192,6 +192,10 @@ class productCategories {
         let LV = element.all(by.xpath("//h1[normalize-space()='White LV Bag']"));
         await LV.click();
     };
+    async clickOnSculpture(){
+        let sculpture = element.all(by.xpath("//h1[normalize-space()='Sculpture']"));
+        await sculpture.click();
+    }
   }
 
   module.exports = new productCategories();

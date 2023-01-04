@@ -1,14 +1,11 @@
-class whiteLVBag {
-
+class item {
     async insertBid(BID){
         let insert = element.all(by.id("bid-amount-input"));
-        insert.sendKeys(BID);
+        await insert.sendKeys(BID);
     }
     async placeBid(){
         let placeBidButton = element.all(by.id("place-bid-span"));
-        placeBidButton.click();
+        await placeBidButton.click();
     }
-
 }
-
-module.exports = new whiteLVBag();
+module.exports = new item();
