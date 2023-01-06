@@ -207,103 +207,103 @@ describe('regression tests', ()=> {
   it('RT027',async function(){
     await homepage.clickOn("SHOP");
     await productCategories.clickFashion();
-    await productCategories.clickFashionAccessories();
-    await productCategories.clickFashionBelts();
-    await productCategories.clickFashionAccessories();
-    await productCategories.clickFashionBelts();
+    await productCategories.clickOnSubcategory("Accessories");
+    await productCategories.clickOnSubcategory("Belts");
+    await productCategories.clickOnSubcategory("Accessories");
+    await productCategories.clickOnSubcategory("Belts");
     await browser.sleep(3000);
     await expect(element.all(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   })
   it('RT028',async function(){
     await homepage.clickOn("SHOP");
     await productCategories.clickAccessories();
-    await productCategories.clickAccessoriesJewelry();
-    await productCategories.clickAccessoriesScarves();
-    await productCategories.clickAccessoriesGloves();
-    await productCategories.clickAccessoriesJewelry();
+    await productCategories.clickOnSubcategory("Jewelry");
+    await productCategories.clickOnSubcategory("Scarves");
+    await productCategories.clickOnSubcategory("Gloves");
+    await productCategories.clickOnSubcategory("Jewelry");
     await browser.sleep(3000);
     await expect(element.all(by.xpath("//h1[normalize-space()='Paper Bag']")).isPresent()).toBe(false);
   });
   it('RT029',async function(){
     await homepage.clickOn("SHOP");
     await productCategories.clickElectronics();
-    await productCategories.clickElectronicsMobile();
-    await productCategories.clickElectronicsMicrowaves();
-    await productCategories.clickElectronicsTVs();
-    await productCategories.clickElectronicsMobile();
-    await productCategories.clickElectronicsMicrowaves();
-    await productCategories.clickElectronicsTVs();
+    await productCategories.clickOnSubcategory("Mobile");
+    await productCategories.clickOnSubcategory("Microwaves");
+    await productCategories.clickOnSubcategory("TVs");
+    await productCategories.clickOnSubcategory("Mobile");
+    await productCategories.clickOnSubcategory("Microwaves");
+    await productCategories.clickOnSubcategory("TVs");
     await browser.sleep(3000);
     await expect(element.all(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   });
   it('RT030',async function(){
     await homepage.clickOn("SHOP");
     await productCategories.clickComputers();
-    await productCategories.clickComputersLaptops();
-    await productCategories.clickComputersMonitors();
-    await productCategories.clickComputersLaptops();
+    await productCategories.clickOnSubcategory("Laptops");
+    await productCategories.clickOnSubcategory("Monitors");
+    await productCategories.clickOnSubcategory("Laptops");
     await browser.sleep(3000);
     await expect(element.all(by.xpath("//h1[normalize-space()='Touch Navigation']")).isPresent()).toBe(false);
   })
   it('RT031',async function(){
     await homepage.clickOn("SHOP");
     await productCategories.clickSportswear();
-    await productCategories.clickSportswearSwimsuits();
-    await productCategories.clickSportswearShoes();
-    await productCategories.clickSportswearTShirts();
-    await productCategories.clickSportswearSwimsuits();
-    await productCategories.clickSportswearShoes();
-    await productCategories.clickSportswearTShirts();
+    await productCategories.clickOnSubcategory("Swimsuits");
+    await productCategories.clickOnSubcategory("Shoes");
+    await productCategories.clickOnSubcategory("T-Shirts");
+    await productCategories.clickOnSubcategory("Swimsuits");
+    await productCategories.clickOnSubcategory("Shoes");
+    await productCategories.clickOnSubcategory("T-Shirts");
     await browser.sleep(3000);
     await expect(element.all(by.xpath("//h1[normalize-space()='Touch Navigation']")).isPresent()).toBe(false);
   })
   it('RT032',async function(){
     await homepage.clickOn("SHOP");
     await productCategories.clickWomen();
-    await productCategories.clickWomenBags();
-    await productCategories.clickWomenSwimsuits();
-    await productCategories.clickWomenShoes();
-    await productCategories.clickWomenTShirts();
-    await productCategories.clickWomenClothes();
-    await productCategories.clickWomenAccessories();
-    await productCategories.clickWomenBags();
+    await productCategories.clickOnSubcategory("Bags");
+    await productCategories.clickOnSubcategory("Swimsuits");
+    await productCategories.clickOnSubcategory("Shoes");
+    await productCategories.clickOnSubcategory("T-Shirts");
+    await productCategories.clickOnSubcategory("Clothes");
+    await productCategories.clickOnSubcategory("Accessories");
+    await productCategories.clickOnSubcategory("Bags");
     await browser.sleep(3000);
     await expect(element.all(by.xpath("//h1[normalize-space()='White LV Bag']")).isPresent()).toBe(false);
   })
   it('RT033',async function(){
     await homepage.clickOn("SHOP");
     await productCategories.clickKids();
-    await productCategories.clickKidsBags();
-    await productCategories.clickKidsTShirts();
-    await productCategories.clickKidsClothes();
-    await productCategories.clickKidsToys();
-    await productCategories.clickKidsToys();
+    await productCategories.clickOnSubcategory("Bags");
+    await productCategories.clickOnSubcategory("T-Shirts");
+    await productCategories.clickOnSubcategory("Clothes");
+    await productCategories.clickOnSubcategory("Toys");
+    await productCategories.clickOnSubcategory("Toys");
     await browser.sleep(3000);
     await expect(element.all(by.xpath("//h1[normalize-space()='Wilson Tennis Racket']")).isPresent()).toBe(false);
   })
   it('RT034',async function(){
     await homepage.clickOn("SHOP");
     await productCategories.clickHome();
-    await productCategories.clickHomeBedAndBath();
-    await productCategories.clickHomeTiles();
-    await productCategories.clickHomeCarpets();
-    await productCategories.clickHomeTables();
-    await productCategories.clickHomeChandeliers();
-    await productCategories.clickHomeBedAndBath();
+    await productCategories.clickOnSubcategory("Bed & Bath");
+    await productCategories.clickOnSubcategory("Tiles");
+    await productCategories.clickOnSubcategory("Carpets");
+    await productCategories.clickOnSubcategory("Tables");
+    await productCategories.clickOnSubcategory("Chandeliers");
+    await productCategories.clickOnSubcategory("Bed & Bath");
     await browser.sleep(3000);
     await expect(element.all(by.xpath("//h1[normalize-space()='Stone Tile Cutter']")).isPresent()).toBe(false);
    })
-   it('RT035',async function(){
+  it('RT035',async function(){
     await homepage.clickOn("SHOP");
     await productCategories.clickArt();
-    await productCategories.clickArtNFTs();
-    await productCategories.clickArtDigital();
-    await productCategories.clickArtPaintings();
-    await productCategories.clickArtSculptures();
-    await productCategories.clickArtNFTs();
-    await productCategories.clickArtDigital();
-    await productCategories.clickArtPaintings();
-    await productCategories.clickArtSculptures();
+    await productCategories.clickOnSubcategory("NFTs");
+    await productCategories.clickOnSubcategory("Digital");
+    await productCategories.clickOnSubcategory("Paintings");
+    await productCategories.clickOnSubcategory("Sculptures");
+    await productCategories.clickOnSubcategory("NFTs");
+    await productCategories.clickOnSubcategory("Digital");
+    await productCategories.clickOnSubcategory("Paintings");
+    await productCategories.clickOnSubcategory("Sculptures");
     await browser.sleep(3000);
     await expect(element.all(by.xpath("//h1[normalize-space()='Sculpture']")).isPresent()).toBe(false);
   })
@@ -316,7 +316,7 @@ describe('regression tests', ()=> {
     await browser.sleep(3000);
     await homepage.clickOn("SHOP");
     await browser.sleep(2000);
-    await productCategories.clickOnX("//h1[normalize-space()='Various T-Shirts']");
+    await productCategories.clickOnXpath("//h1[normalize-space()='Various T-Shirts']");
     await browser.sleep(2000);
     await item.insertBid("37");
     await item.placeBid();
@@ -332,7 +332,7 @@ describe('regression tests', ()=> {
     await browser.sleep(3000);
     await homepage.clickOn("SHOP");
     await browser.sleep(2000);
-    await productCategories.clickOnX("//h1[normalize-space()='Various T-Shirts']");
+    await productCategories.clickOnXpath("//h1[normalize-space()='Various T-Shirts']");
     await browser.sleep(2000);
     await item.insertBid("33");
     await item.placeBid();

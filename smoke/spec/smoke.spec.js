@@ -17,9 +17,9 @@ describe('smoke test',()=>{
         await login.rememberMe();
         await login.clickLogin();
         await homepage.clickOn("SHOP");
-        await productCategories.clickOn("explore-more");
+        await productCategories.clickOnId("explore-more");
         await browser.sleep(2000);
-        await productCategories.clickOnX("//h1[normalize-space()='New Balance Shoe']");
+        await productCategories.clickOnXpath("//h1[normalize-space()='New Balance Shoe']");
         await browser.sleep(3000);
         await item.insertBid("101");
         await item.placeBid();
@@ -27,7 +27,7 @@ describe('smoke test',()=>{
         await expect(element.all(by.id("message-container-invalid")).isPresent()).toBe(true);
         await item.clickOn("SHOP");
         await browser.sleep(2000);
-        await productCategories.clickOnX("//h1[normalize-space()='Swimming Shorts']");
+        await productCategories.clickOnXpath("//h1[normalize-space()='Swimming Shorts']");
         await browser.sleep(2000);
         await item.insertBid("49");
         await item.placeBid();
