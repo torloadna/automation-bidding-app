@@ -1,7 +1,7 @@
 class productCategories {
   
     async clickFashion(){
-        let fashion = element(by.id("ca69f0cb-8b11-4b3e-8ad7-18b4277f6101"));
+        let fashion = element(by.id("ca69f0cb-8b11-4b3e-8ad7-18b4277f6101")); 
         var EC = protractor.ExpectedConditions;
         browser.wait(EC.elementToBeClickable(fashion), 5000);
         await fashion.click();

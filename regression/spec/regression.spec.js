@@ -23,52 +23,52 @@ describe('regression tests', ()=> {
 
   it('RT001',async function(){
     await homepage.clickOn("Fashion");
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     expect(element(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   })
   it('RT002',async function(){
     await homepage.clickOn("Accessories");
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     expect(element(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   })
   it('RT003',async function(){
     await homepage.clickOn("Electronics");
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     expect(element(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   })
   it('RT004',async function(){
     await homepage.clickOn("Computers");
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     expect(element(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   })
   it('RT005',async function(){
     await homepage.clickOn("Sportswear");
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     expect(element(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   })
   it('RT006',async function(){
     await homepage.clickOn("Men");
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     expect(element(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   })
   it('RT007',async function(){
     await homepage.clickOn("Women");
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     expect(element(by.xpath("//h1[normalize-space()='Wilson Tennis Racket']")).isPresent()).toBe(false);
   })
   it('RT008',async function(){
     await homepage.clickOn("Kids");
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     expect(element(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   })
   it('RT009',async function(){
     await homepage.clickOn("Home");
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     expect(element(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   })
   it('RT010',async function(){
     await homepage.clickOn("Art");
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     expect(element(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   })
   it('RT011',async function(){
@@ -79,7 +79,7 @@ describe('regression tests', ()=> {
     await createAnAccount.insertEmail('adna.torlo@edu.fit.'+getRandomString(3));
     await createAnAccount.insertPassword('adnatorlo123!');
     await createAnAccount.clickRegister();
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     await expect(element.all(by.id("username")).isPresent()).toBe(true);
   })
   it('RT012',async function(){
@@ -90,7 +90,7 @@ describe('regression tests', ()=> {
     await createAnAccount.insertEmail('adna.torlo@edu.fit.'+getRandomString(3));
     await createAnAccount.insertPassword('adnatorlo123!');
     await createAnAccount.clickRegister();
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     await expect(element.all(by.id("username")).isPresent()).toBe(false);
   })
   it('RT013',async function(){
@@ -101,7 +101,7 @@ describe('regression tests', ()=> {
     await createAnAccount.insertEmail('adna.torlo@edu.fit.'+getRandomString(3));
     await createAnAccount.insertPassword('adnatorlo123!');
     await createAnAccount.clickRegister();
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     await expect(element.all(by.id("username")).isPresent()).toBe(false);
   })
   it('RT014',async function(){
@@ -112,7 +112,7 @@ describe('regression tests', ()=> {
     await createAnAccount.insertEmail('adna.torlo@edu.fit.b'+getRandomString(3));
     await createAnAccount.insertPassword('adnatorlo123!');
     await createAnAccount.clickRegister();
-    await browser.sleep(3000);
+    await browser.sleep(2000);
     await expect(element.all(by.id("username")).isPresent()).toBe(false);
   })
   it('RT015',async function(){
@@ -123,8 +123,8 @@ describe('regression tests', ()=> {
     await createAnAccount.insertEmail('adna@adna');
     await createAnAccount.insertPassword('adnatorlo123!');
     await createAnAccount.clickRegister();
-    await browser.sleep(3000);
-    expect(element.all(by.id("username")).isPresent()).toBe(false);
+    await browser.sleep(2000);
+    await expect(element.all(by.id("username")).isPresent()).toBe(false);
   })
   it('RT016',async function(){
     await homepage.clickOn("Create an account");
@@ -135,7 +135,7 @@ describe('regression tests', ()=> {
     await createAnAccount.insertPassword('1');
     await createAnAccount.clickRegister();
     await browser.sleep(3000);
-    expect(element.all(by.id("username")).isPresent()).toBe(false);
+    await expect(element.all(by.id("username")).isPresent()).toBe(false);
   })
   it('RT017',async function(){
     await homepage.clickOn("HOME");
@@ -173,15 +173,6 @@ describe('regression tests', ()=> {
     await browser.sleep(3000);
     await expect(element.all(by.id("username")).getText()).toContain("Hi, adna123");
   })
-  it('RT024',async function(){
-    await homepage.clickOn("Login");
-    await login.insertEmail("adna.torlo@edu.fit.ba");
-    await login.insertPassword("adnatorlo123!");
-    await login.rememberMe();
-    await login.clickLogin();
-    await browser.sleep(3000);
-    await expect(element.all(by.id("username")).getText()).toContain("Hi, adna123");
-  })
   it('RT025',async function(){
     await homepage.clickOn("Login");
     await login.insertEmail("adna.torlo@edu.dif.ba");
@@ -196,7 +187,7 @@ describe('regression tests', ()=> {
   it('RT026',async function(){
     await homepage.clickOn("Login");
     await login.insertEmail("adna.torlo@edu.fit.ba");
-    await login.insertPassword("adnatorlo123");
+    await login.insertPassword("adn");
     await login.rememberMe();
     await login.clickLogin();
     await browser.sleep(3000);
@@ -204,7 +195,17 @@ describe('regression tests', ()=> {
     await browser.sleep(3000);
     await expect(element.all(by.id("input-password")).isPresent()).toBe(true);
   })
+  it('RT024',async function(){
+    await homepage.clickOn("Login");
+    await login.insertEmail("adna.torlo@edu.fit.ba");
+    await login.insertPassword("adnatorlo123!");
+    //await login.rememberMe();
+    await login.clickLogin();
+    await browser.sleep(3000);
+    await expect(element.all(by.id("username")).getText()).toContain("Hi, adna123");
+  })
   it('RT027',async function(){
+    await browser.sleep(3000);
     await homepage.clickOn("SHOP");
     await productCategories.clickFashion();
     await productCategories.clickOnSubcategory("Accessories");
@@ -215,6 +216,7 @@ describe('regression tests', ()=> {
     await expect(element.all(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   })
   it('RT028',async function(){
+    await browser.sleep(3000);
     await homepage.clickOn("SHOP");
     await productCategories.clickAccessories();
     await productCategories.clickOnSubcategory("Jewelry");
@@ -225,6 +227,7 @@ describe('regression tests', ()=> {
     await expect(element.all(by.xpath("//h1[normalize-space()='Paper Bag']")).isPresent()).toBe(false);
   });
   it('RT029',async function(){
+    await browser.sleep(3000);
     await homepage.clickOn("SHOP");
     await productCategories.clickElectronics();
     await productCategories.clickOnSubcategory("Mobile");
@@ -237,6 +240,7 @@ describe('regression tests', ()=> {
     await expect(element.all(by.xpath("//h1[normalize-space()='Womens T-Shirt']")).isPresent()).toBe(false);
   });
   it('RT030',async function(){
+    await browser.sleep(3000);
     await homepage.clickOn("SHOP");
     await productCategories.clickComputers();
     await productCategories.clickOnSubcategory("Laptops");
@@ -246,6 +250,7 @@ describe('regression tests', ()=> {
     await expect(element.all(by.xpath("//h1[normalize-space()='Touch Navigation']")).isPresent()).toBe(false);
   })
   it('RT031',async function(){
+    await browser.sleep(3000);
     await homepage.clickOn("SHOP");
     await productCategories.clickSportswear();
     await productCategories.clickOnSubcategory("Swimsuits");
@@ -258,6 +263,7 @@ describe('regression tests', ()=> {
     await expect(element.all(by.xpath("//h1[normalize-space()='Touch Navigation']")).isPresent()).toBe(false);
   })
   it('RT032',async function(){
+    await browser.sleep(3000);
     await homepage.clickOn("SHOP");
     await productCategories.clickWomen();
     await productCategories.clickOnSubcategory("Bags");
@@ -271,6 +277,7 @@ describe('regression tests', ()=> {
     await expect(element.all(by.xpath("//h1[normalize-space()='White LV Bag']")).isPresent()).toBe(false);
   })
   it('RT033',async function(){
+    await browser.sleep(3000);
     await homepage.clickOn("SHOP");
     await productCategories.clickKids();
     await productCategories.clickOnSubcategory("Bags");
@@ -282,6 +289,7 @@ describe('regression tests', ()=> {
     await expect(element.all(by.xpath("//h1[normalize-space()='Wilson Tennis Racket']")).isPresent()).toBe(false);
   })
   it('RT034',async function(){
+    await browser.sleep(3000);
     await homepage.clickOn("SHOP");
     await productCategories.clickHome();
     await productCategories.clickOnSubcategory("Bed & Bath");
@@ -294,6 +302,7 @@ describe('regression tests', ()=> {
     await expect(element.all(by.xpath("//h1[normalize-space()='Stone Tile Cutter']")).isPresent()).toBe(false);
    })
   it('RT035',async function(){
+    await browser.sleep(3000);
     await homepage.clickOn("SHOP");
     await productCategories.clickArt();
     await productCategories.clickOnSubcategory("NFTs");
@@ -318,7 +327,7 @@ describe('regression tests', ()=> {
     await browser.sleep(2000);
     await productCategories.clickOnXpath("//h1[normalize-space()='Various T-Shirts']");
     await browser.sleep(2000);
-    await item.insertBid("37");
+    await item.insertBid("39");
     await item.placeBid();
     await browser.sleep(2000);
     await expect(element.all(by.id("message-container-topbid")).isPresent()).toBe(true);
@@ -334,7 +343,23 @@ describe('regression tests', ()=> {
     await browser.sleep(2000);
     await productCategories.clickOnXpath("//h1[normalize-space()='Various T-Shirts']");
     await browser.sleep(2000);
-    await item.insertBid("33");
+    await item.insertBid("31");
+    await item.placeBid();
+    await browser.sleep(2000);
+    await expect(element.all(by.id("message-container-invalid")).isPresent()).toBe(true);
+  })
+  it('RT038',async function(){
+    await homepage.clickOn("Login");
+    await login.insertEmail("adna.torlo@edu.fit.ba");
+    await login.insertPassword("adnatorlo123!");
+    await login.rememberMe();
+    await login.clickLogin();
+    await browser.sleep(3000);
+    await homepage.clickOn("SHOP");
+    await browser.sleep(2000);
+    await productCategories.clickOnXpath("//h1[normalize-space()='Sculpture']");
+    await browser.sleep(2000);
+    await item.insertBid("100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
     await item.placeBid();
     await browser.sleep(2000);
     await expect(element.all(by.id("message-container-invalid")).isPresent()).toBe(true);
