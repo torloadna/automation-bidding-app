@@ -8,7 +8,7 @@ describe('regression tests', ()=> {
 
   beforeEach(async function() {  
     browser.ignoreSynchronization = true;
-    await browser.get('http://ec2-3-73-53-128.eu-central-1.compute.amazonaws.com:8090/');
+    await browser.get('http://ec2-3-124-113-90.eu-central-1.compute.amazonaws.com:8090/');
     await browser.manage().window().maximize();
   });
 
@@ -140,7 +140,7 @@ describe('regression tests', ()=> {
   it('RT017',async function(){
     await homepage.clickOn("HOME");
     await browser.sleep(3000);
-    await expect(element.all(by.id("name")).isPresent()).toBe(true);
+    await expect(element.all(by.id("highlighted-product")).isPresent()).toBe(true);
   })
   it('RT018',async function(){
     await homepage.clickOn("SHOP");
@@ -199,7 +199,7 @@ describe('regression tests', ()=> {
     await homepage.clickOn("Login");
     await login.insertEmail("adna.torlo@edu.fit.ba");
     await login.insertPassword("adnatorlo123!");
-    //await login.rememberMe();
+    await login.rememberMe();
     await login.clickLogin();
     await browser.sleep(3000);
     await expect(element.all(by.id("username")).getText()).toContain("Hi, adna123");
@@ -327,7 +327,7 @@ describe('regression tests', ()=> {
     await browser.sleep(2000);
     await productCategories.clickOnXpath("//h1[normalize-space()='Various T-Shirts']");
     await browser.sleep(2000);
-    await item.insertBid("39");
+    await item.insertBid("60");
     await item.placeBid();
     await browser.sleep(2000);
     await expect(element.all(by.id("message-container-topbid")).isPresent()).toBe(true);
@@ -359,7 +359,7 @@ describe('regression tests', ()=> {
     await browser.sleep(2000);
     await productCategories.clickOnXpath("//h1[normalize-space()='Sculpture']");
     await browser.sleep(2000);
-    await item.insertBid("100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
+    await item.insertBid("1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
     await item.placeBid();
     await browser.sleep(2000);
     await expect(element.all(by.id("message-container-invalid")).isPresent()).toBe(true);

@@ -29,7 +29,7 @@ describe('smoke test',()=>{
         await browser.sleep(2000);
         await productCategories.clickOnXpath("//h1[normalize-space()='Swimming Shorts']");
         await browser.sleep(2000);
-        await item.insertBid("50");
+        await item.insertBid("65");
         await item.placeBid();
         await browser.sleep(3000);
         await expect(element.all(by.id("message-container-topbid")).isPresent()).toBe(true);
