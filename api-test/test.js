@@ -19,3 +19,40 @@ describe('Role-controller', ()=>{
         });
     });
 });
+describe('Product-controller', ()=>{
+    it('GET api/v1/products', (done)=>{
+        request.get("api/v1/products").end((err, res) => {
+            console.log(res.body);
+            console.log(err);
+            done();
+        });
+    });
+    it('GET api/v1/products/latest', (done)=>{
+        request.get('GET api/v1/products/latest').end((err,res)=>{
+            console.log(res.body);
+            console.log(err);
+            done();
+        });
+    });
+    it('GET api/v1/products/last-chance', (done)=>{
+        request.get('GET api/v1/products/last-chance').end((err,res)=>{
+            console.log(res.body);
+            console.log(err);
+            done();
+        });
+    });
+    it('GET api/v1/products/filter', (done)=>{
+        request.get('GET api/v1/products/filter').end((err,res)=>{
+            console.log(res.body);
+            console.log(err);
+            done();
+        });
+    });
+    it('GET api/v1/products/cheapest', (done)=>{
+        request.get('GET api/v1/products/cheapest').end((err,res)=>{
+            console.log(res.body);
+            console.log(err);
+            done();
+        });
+    });
+});
