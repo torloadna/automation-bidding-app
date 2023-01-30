@@ -7,7 +7,7 @@ exports.config = {
   
     framework: 'jasmine',
   
-    specs: ['..//spec/personalInfo.spec.js'],
+    specs: ['..//spec/shippingAdress.spec.js'],
   
     //SELENIUM_PROMISE_MANAGER: false,
     // Options to be passed to Jasmine.

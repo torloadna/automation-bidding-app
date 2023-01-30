@@ -17,5 +17,11 @@ class myAccount {
         let el = element.all(by.id(id));
         await el.sendKeys(data);
     }
+    async selectCountry(){
+        let country = element.all(by.xpath("//span[@class='ant-select-selection-item']"));
+        await country.click();
+        let bosnia = element.all(by.xpath("//div[@title='Bosnia Herzegovina']//div[@class='ant-select-item-option-content']"));
+        await bosnia.click();
+    }
   }
   module.exports = new myAccount();
