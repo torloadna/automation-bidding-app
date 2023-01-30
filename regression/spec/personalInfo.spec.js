@@ -62,7 +62,7 @@ describe('regression tests', ()=> {
     await myAccount.insert("account-phone","+38762002501");
     await browser.sleep(3000);
   })
-  it('RT040',async function(){
+  it('RT043',async function(){
     await homepage.clickOn("MY ACCOUNT");
     await login.insertEmail("adna.torlo@edu.fit.ba");
     await login.insertPassword("adnatorlo123!");
@@ -76,7 +76,7 @@ describe('regression tests', ()=> {
     await myAccount.insert("account-phone","+38762002501");
     await browser.sleep(3000);
   })
-  it('RT040',async function(){
+  it('RT044',async function(){
     await homepage.clickOn("MY ACCOUNT");
     await login.insertEmail("adna.torlo@edu.fit.ba");
     await login.insertPassword("adnatorlo123!");
