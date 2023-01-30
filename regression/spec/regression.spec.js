@@ -3,6 +3,7 @@ const productCategories = require('../pageObjects/productCategories');
 const createAnAccount = require('../pageObjects/createAnAccount');
 const login = require('../pageObjects/login');
 const item = require('../pageObjects/item');
+const myAccount = require('../pageObjects/myAccount');
 
 describe('regression tests', ()=> {
 
@@ -359,9 +360,11 @@ describe('regression tests', ()=> {
     await browser.sleep(2000);
     await productCategories.clickOnXpath("//h1[normalize-space()='Sculpture']");
     await browser.sleep(2000);
-    await item.insertBid("1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
+    let largeNumber = Math.pow(100, 10); console.log(power);
+    await item.insertBid(largeNumber)
     await item.placeBid();
     await browser.sleep(2000);
     await expect(element.all(by.id("message-container-invalid")).isPresent()).toBe(true);
   })
+ 
 });
