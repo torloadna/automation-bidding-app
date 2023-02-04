@@ -4,7 +4,6 @@ const request = supertest('http://ec2-3-124-113-90.eu-central-1.compute.amazonaw
 const rolesId = "3b456fd2-f08e-4d5b-a18b-dc8f962f593f";
 const productAuctionsId = "32406779-dfb2-457d-bcec-8487b9c6e217";
 const userId = "b3b3b189-743a-499e-a706-e1838fb20599";
-const bidId = "";
 const addressId = "99385ef8-9933-4bec-8b34-d0606c66bd57";
 const cardId = "762b5185-43be-4e5e-aeb9-b6a844e407fd";
 const categoryId = "ca69f0cb-8b11-4b3e-8ad7-18b4277f6101";
