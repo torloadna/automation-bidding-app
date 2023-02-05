@@ -20,7 +20,7 @@ describe('regression tests', ()=> {
     await browser.sleep(4000);
     await expect(element.all(by.id("breadcrumb-title")).isPresent()).toBe(true);
   })
-  fit('RT040',async function(){
+  it('RT040',async function(){
     await homepage.clickOn("Login");
     await login.insertEmail("adna.torlo@edu.fit.ba");
     await login.insertPassword("adnatorlo123!");
@@ -33,6 +33,7 @@ describe('regression tests', ()=> {
     await myAccount.insertDateOfBirth("04/06/2001");
     await myAccount.insert("account-phone","+38762002501");
     await browser.sleep(3000);
+    await expect(element.all(by.xpath("//span[@class='pattern-mismatch-message']")).isPresent()).toBe(false);
   })
   it('RT041',async function(){
     await homepage.clickOn("MY ACCOUNT");
@@ -47,6 +48,7 @@ describe('regression tests', ()=> {
     await myAccount.insertDateOfBirth("04/06/2001");
     await myAccount.insert("account-phone","+38762002501");
     await browser.sleep(3000);
+    await expect(element.all(by.id("//span[@class='pattern-mismatch-message']")).isPresent()).toBe(true);
   })
   it('RT042',async function(){
     await homepage.clickOn("MY ACCOUNT");
@@ -61,6 +63,7 @@ describe('regression tests', ()=> {
     await myAccount.insertDateOfBirth("04/06/2001");
     await myAccount.insert("account-phone","+38762002501");
     await browser.sleep(3000);
+    await expect(element.all(by.id("//span[@class='pattern-mismatch-message']")).isPresent()).toBe(true);
   })
   it('RT043',async function(){
     await homepage.clickOn("MY ACCOUNT");
@@ -75,6 +78,7 @@ describe('regression tests', ()=> {
     await myAccount.insertDateOfBirth("04/06/2020");
     await myAccount.insert("account-phone","+38762002501");
     await browser.sleep(3000);
+    await expect(element.all(by.xpath("//table[@class='ant-picker-content']")).isPresent()).toBe(true);
   })
   it('RT044',async function(){
     await homepage.clickOn("MY ACCOUNT");
@@ -89,6 +93,7 @@ describe('regression tests', ()=> {
     await myAccount.insertDateOfBirth("04/06/2001");
     await myAccount.insert("account-phone","+ad012a!");
     await browser.sleep(3000);
+    await expect(element.all(by.id("//span[@class='pattern-mismatch-message']")).isPresent()).toBe(true);
   })
 
 })

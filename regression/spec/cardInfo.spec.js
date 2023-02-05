@@ -23,6 +23,7 @@ describe('regression tests', ()=> {
     await myAccount.insert("card-number","1234-1234-1234-1234");
     await myAccount.insert("card-expiry-date","08/25");
     await myAccount.insert("card-cvc","532");
+    await browser.sleep(3000);
   })
   it('RT046',async function(){
     await homepage.clickOn("MY ACCOUNT");

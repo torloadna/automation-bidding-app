@@ -360,7 +360,7 @@ describe('regression tests', ()=> {
     await browser.sleep(2000);
     await productCategories.clickOnXpath("//h1[normalize-space()='Sculpture']");
     await browser.sleep(2000);
-    let largeNumber = Math.pow(100, 10); console.log(power);
+    let largeNumber = Math.pow(100, 10); 
     await item.insertBid(largeNumber)
     await item.placeBid();
     await browser.sleep(2000);
