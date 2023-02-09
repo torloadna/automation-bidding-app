@@ -1,6 +1,6 @@
 import supertest from "supertest";
 import { expect } from "chai";
-const request = supertest('http://ec2-3-124-113-90.eu-central-1.compute.amazonaws.com:8080/backend/');
+const request = supertest('https://ec2-3-124-113-90.eu-central-1.compute.amazonaws.com:8080/backend/');
 const rolesId = "3b456fd2-f08e-4d5b-a18b-dc8f962f593f";
 const productAuctionsId = "32406779-dfb2-457d-bcec-8487b9c6e217";
 const userId = "b3b3b189-743a-499e-a706-e1838fb20599";

@@ -24,7 +24,7 @@ describe('smoke test',()=>{
         await item.insertBid("101");
         await item.placeBid();
         await browser.sleep(2000);
-        //await expect(element.all(by.id("message-container-invalid")).isPresent()).toBe(true);
+        await expect(element.all(by.id("message-container-invalid")).isPresent()).toBe(false);
         await item.clickOn("SHOP");
         await browser.sleep(2000);
         await productCategories.clickOnXpath("//h1[normalize-space()='Swimming Shorts']");
@@ -32,6 +32,6 @@ describe('smoke test',()=>{
         await item.insertBid("65");
         await item.placeBid();
         await browser.sleep(3000);
-        //await expect(element.all(by.id("message-container-topbid")).isPresent()).toBe(true);
+        await expect(element.all(by.id("message-container-topbid")).isPresent()).toBe(false);
     })
 })

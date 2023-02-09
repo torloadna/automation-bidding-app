@@ -1,6 +1,8 @@
 const homepage = require('../pageObjects/homepage');
 const login = require('../pageObjects/login');
 const myAccount = require('../pageObjects/myAccount');
+const email = "adna.torlo@edu.fit.ba";
+const password = "adnatorlo123!";
 
 describe('regression tests', ()=> {
   
@@ -13,8 +15,8 @@ describe('regression tests', ()=> {
   
   it('RT050',async function(){
     await homepage.clickOn("Login");
-    await login.insertEmail("adna.torlo@edu.fit.ba");
-    await login.insertPassword("adnatorlo123!");
+    await login.insertEmail(email);
+    await login.insertPassword(password);
     await login.rememberMe();
     await login.clickLogin();
     await browser.sleep(3000);
@@ -31,8 +33,8 @@ describe('regression tests', ()=> {
   })
   it('RT051',async function(){
     await homepage.clickOn("Login");
-    await login.insertEmail("adna.torlo@edu.fit.ba");
-    await login.insertPassword("adnatorlo123!");
+    await login.insertEmail(email);
+    await login.insertPassword(password);
     await login.rememberMe();
     await login.clickLogin();
     await browser.sleep(3000);
@@ -49,8 +51,8 @@ describe('regression tests', ()=> {
   })
   it('RT052',async function(){
     await homepage.clickOn("Login");
-    await login.insertEmail("adna.torlo@edu.fit.ba");
-    await login.insertPassword("adnatorlo123!");
+    await login.insertEmail(email);
+    await login.insertPassword(password);
     await login.rememberMe();
     await login.clickLogin();
     await browser.sleep(3000);
@@ -67,8 +69,8 @@ describe('regression tests', ()=> {
   })
   it('RT053',async function(){
     await homepage.clickOn("Login");
-    await login.insertEmail("adna.torlo@edu.fit.ba");
-    await login.insertPassword("adnatorlo123!");
+    await login.insertEmail(email);
+    await login.insertPassword(password);
     await login.rememberMe();
     await login.clickLogin();
     await browser.sleep(3000);
@@ -85,8 +87,8 @@ describe('regression tests', ()=> {
   })
   it('RT054',async function(){
     await homepage.clickOn("Login");
-    await login.insertEmail("adna.torlo@edu.fit.ba");
-    await login.insertPassword("adnatorlo123!");
+    await login.insertEmail(email);
+    await login.insertPassword(password);
     await login.rememberMe();
     await login.clickLogin();
     await browser.sleep(3000);
